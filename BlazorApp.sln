@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp", "BlazorApp\BlazorApp.csproj", "{1D860DE0-BAEA-4D01-B3E8-7934EA95A118}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MakePDF", "MakePDF\MakePDF.csproj", "{14339280-3B14-4EFE-B6DE-A654F175CC51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D860DE0-BAEA-4D01-B3E8-7934EA95A118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D860DE0-BAEA-4D01-B3E8-7934EA95A118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D860DE0-BAEA-4D01-B3E8-7934EA95A118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D860DE0-BAEA-4D01-B3E8-7934EA95A118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14339280-3B14-4EFE-B6DE-A654F175CC51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14339280-3B14-4EFE-B6DE-A654F175CC51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14339280-3B14-4EFE-B6DE-A654F175CC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14339280-3B14-4EFE-B6DE-A654F175CC51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D38581A-A326-4D74-AD90-B2EAAAFABB17}
+	EndGlobalSection
+EndGlobal

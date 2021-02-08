@@ -1,0 +1,43 @@
+﻿@page "/"
+@inject IJSRuntime js
+
+<h1>Simple PDF</h1>
+
+<p>This is one of the simplest possible examples of creating a PDF and saving or displaying it with Blazor</p>
+<p style="font-weight:bolder">
+    Greeting:
+    <select @bind="greeting">
+        <option value="Hello" selected>Hello</option>
+        <option value="Bonjour">Bonjour</option>
+        <option value="Hola">Hola</option>
+        <option value="Ciao">Ciao</option>
+    </select>
+</p>
+
+<button class="btn btn-primary" @onclick="@(e => SaveToFile("Hello.pdf"))">Save To File</button>
+<button class="btn btn-primary" @onclick="@(e => OpenNewWindow("Hello.pdf"))">New Window</button>
+
+<p>
+    Please note, some web browsers and ad blockers will block the new window from opening.
+    There is usually a prompt to allow it if so, though the prompt may not be easy to notice.
+</p>
+<p>
+    In general, the Save to File option is the better choice.
+</p>
+
+@code {
+    private string greeting = "Hello";
+
+    private void SaveToFile(string filename)
+    {
+        byte[] data = MakePDF.MyPDF.Hello(greeting);
+        js.InvokeVoidAsync("SaveFile", filename, Convert.ToBase64String(data));
+    }
+
+    private void OpenNewWindow(string filename)
+    {
+        byte[] data = MakePDF.MyPDF.Hello(greeting);
+        js.InvokeVoidAsync("OpenNew", Convert.ToBase64String(data));
+    }
+
+}
